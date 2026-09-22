@@ -27,3 +27,26 @@ The network used a hierarchical architecture and incorporated network segmentati
 - **Routing & Redundancy:** OSPF, EtherChannel
 - **Services & Security:** DHCP and DHCP relay, Access Control Lists (ACLs), Cisco IOS device hardening
 - **Inter-site Connectivity:** GRE tunnel
+
+
+## Network Architecture
+
+The network was designed to support two organisational sites in Accra and Kumasi using a hierarchical network architecture.
+
+The design separated functions into core, distribution, and access layers, providing a structured approach to connectivity, segmentation, routing, security, and future expansion.
+
+### Site Design
+
+- **Accra:** Primary site supporting multiple user departments, network services, and enterprise connectivity
+- **Kumasi:** Secondary site with its own local network infrastructure and connectivity to Accra
+- **Inter-site connectivity:** A GRE tunnel provided logical connectivity between the two sites in the simulated environment
+
+### Network Segmentation
+
+VLANs were used to logically separate users and services into distinct network segments. This reduced broadcast domain size and provided a foundation for controlling communication between departments and services.
+
+802.1Q trunk links carried multiple VLANs between network devices, while inter-VLAN routing enabled controlled communication between VLANs.
+
+### Routing and Redundancy
+
+OSPF was used for dynamic route exchange within the simulated network. EtherChannel combined multiple physical links into logical links, providing additional bandwidth and link redundancy.
