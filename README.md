@@ -110,3 +110,20 @@ Baseline security controls are applied to the simulated network infrastructure, 
 - BPDU Guard to protect edge ports from unexpected spanning-tree participation
 
 These controls complement VLAN segmentation and ACL-based traffic filtering to provide a basic layered security approach within the simulated environment.
+
+
+## Inter-Site Connectivity
+
+The Accra headquarters and Kumasi branch are connected through a GRE tunnel in the Cisco Packet Tracer simulation. The tunnel provides a Layer 3 path between the two sites and allows traffic to flow between their respective networks.
+
+### Inter-Site Routing
+
+Inter-site reachability uses static routing rather than an OSPF adjacency across the GRE tunnel. The Kumasi departmental networks are represented by the summary route `10.20.0.0/23`, which covers the branch address space used in the simulation.
+
+OSPF handles dynamic routing within the relevant internal networks, while the inter-site path is handled separately through the static route.
+
+### Simulation and Production Distinction
+
+The GRE tunnel represents the logical inter-site connection in the Packet Tracer environment. GRE does not provide encryption and is therefore not treated as the production security mechanism.
+
+The production design documented in the Technical Design Report proposes a resilient WAN architecture using diverse transports, SD-WAN, and site-to-site IPsec to protect traffic between Accra and Kumasi.
