@@ -84,3 +84,29 @@ The IP addressing plan used Variable Length Subnet Masking (VLSM) to allocate ad
 | 99 | NATIVE/MGMT | 192.168.1.0/24 | 192.168.1.1 | Native/trunk management |
 
 The addressing structure keeps the two sites logically separated while providing sufficient capacity for projected growth. Departmental VLANs also establish Layer 3 boundaries where communication between network segments can be controlled.
+
+
+## Network Services and Security
+
+### Network Services
+
+DHCP provides dynamic IP address assignment within the simulated network. The addressing scheme aligns with the VLAN and subnet design so that representative hosts operate within their assigned network segments.
+
+### Access Control
+
+Access Control Lists (ACLs) demonstrate controlled communication between network segments. The simulation includes:
+
+- `BLOCK-FINANCE-TO-HR`: restricts specified traffic between the Finance and HR networks
+- `MGMT-ACCESS`: restricts access to management resources
+
+### Device and Management Security
+
+Baseline security controls are applied to the simulated network infrastructure, including:
+
+- SSH for secure remote device administration
+- Restrictions on permitted management sources
+- Disabling or isolating unused access paths
+- PortFast on appropriate edge interfaces
+- BPDU Guard to protect edge ports from unexpected spanning-tree participation
+
+These controls complement VLAN segmentation and ACL-based traffic filtering to provide a basic layered security approach within the simulated environment.
