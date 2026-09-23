@@ -127,3 +127,23 @@ OSPF handles dynamic routing within the relevant internal networks, while the in
 The GRE tunnel represents the logical inter-site connection in the Packet Tracer environment. GRE does not provide encryption and is therefore not treated as the production security mechanism.
 
 The production design documented in the Technical Design Report proposes a resilient WAN architecture using diverse transports, SD-WAN, and site-to-site IPsec to protect traffic between Accra and Kumasi.
+
+
+## Validation and Testing
+
+The network design was validated in Cisco Packet Tracer to confirm that the implemented configuration operated as intended.
+
+Validation focused on key areas of the logical network design, including:
+
+- VLAN assignment and segmentation
+- Inter-VLAN connectivity
+- OSPF route learning within the internal network
+- Inter-site reachability between Accra and Kumasi
+- DHCP address assignment
+- ACL-based traffic restrictions
+- EtherChannel operation and link redundancy
+- Secure device management using SSH
+
+Connectivity and configuration checks were used to verify expected network behaviour and identify configuration issues during implementation.
+
+The Packet Tracer validation applies to the simulated network only. Production technologies and controls described in the Technical Design Report but not implemented in Packet Tracer are not presented as simulation-tested.
