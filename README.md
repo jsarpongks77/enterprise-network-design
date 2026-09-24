@@ -147,3 +147,9 @@ Validation focused on key areas of the logical network design, including:
 Connectivity and configuration checks were used to verify expected network behaviour and identify configuration issues during implementation.
 
 The Packet Tracer validation applies to the simulated network only. Production technologies and controls described in the Technical Design Report but not implemented in Packet Tracer are not presented as simulation-tested.
+
+
+## Project Files
+
+- [Technical Design Report](./GlobalBridge-Enterprise-Network-Technical-Design-Report.pdf)
+- [Cisco Packet Tracer Simulation](./GlobalBridge-Enterprise-Network.pkt)
